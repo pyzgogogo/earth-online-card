@@ -1,0 +1,33 @@
+{
+  "mode": "holographic",
+  "title": "地球 ONLINE",
+  "subtitle": "心有正义 · 眼有星光",
+  "technique": "正义 · 果断 · 善良",
+  "tagline": "心怀正义，行事果断，始终善良。",
+  "edition": "001 / 001",
+  "collection": "EARTH ONLINE · PERSONAL COLLECTION",
+  "description": "湖畔树影中的个人全息典藏卡。身份：警察；爱好：睡觉，为下一次出发蓄能。",
+  "font": "C:/Windows/Fonts/msyh.ttc",
+  "parameters": {
+    "subjectScale": 1.0,
+    "subjectDepth": 0.34,
+    "backgroundDepth": -0.22,
+    "foil": 0.64,
+    "particles": 0.8,
+    "glow": 0.35
+  },
+  "safeArea": {
+    "scale": 1.0,
+    "offset": [
+      0,
+      0
+    ]
+  },
+  "assets": {
+    "subject": "./assets/subject.png",
+    "background": "./assets/background.png",
+    "text": "./assets/text.png",
+    "lineart": "./assets/lineart.png",
+    "model": "./assets/card.glb"
+  }
+}

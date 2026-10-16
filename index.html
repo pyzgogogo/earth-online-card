@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>地球 ONLINE</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/examples/jsm/"}}</script>
+<meta name="description" content="地球 ONLINE · 心有正义，眼有星光。拖动查看人物视差与全息镭射，支持翻面和保存图片。">
+  <meta property="og:title" content="地球 ONLINE · 全息闪卡">
+  <meta property="og:description" content="心有正义 · 眼有星光。点开转动，看看流动的彩虹镭射。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://pyzgogogo.github.io/earth-online-card/assets/share-preview.png">
+  <meta property="og:url" content="https://pyzgogogo.github.io/earth-online-card/">
+  <link rel="canonical" href="https://pyzgogogo.github.io/earth-online-card/">
+</head>
+<body>
+  <header class="topbar">
+    <a class="wordmark" href="./" aria-label="Holo Card Studio">HOLO CARD STUDIO</a>
+    <span id="edition" class="edition">001 / 001</span>
+  </header>
+
+  <main>
+    <section class="identity" aria-labelledby="card-title">
+      <p id="subtitle" class="kicker">COLLECTIBLE CARD</p>
+      <h1 id="card-title">CARD TITLE</h1>
+      <div class="actions" aria-label="卡片操作">
+        <button id="auto" type="button" aria-pressed="false">自动旋转</button>
+        <button id="flip" type="button">查看背面</button>
+        <button id="reset" type="button">复位</button>
+        <button id="save" type="button">保存图片</button>
+      </div>
+    </section>
+
+    <section class="display" aria-label="互动全息镭射卡">
+      <div id="stage" tabindex="0" role="img" aria-label="拖动卡片旋转，滚轮缩放，F 键翻面，R 键复位。">
+        <div id="loading" role="status">正在加载闪卡</div>
+      </div>
+      <output id="view-label" class="view-label">正面</output>
+    </section>
+  </main>
+
+  <section class="controls" aria-label="材质与视差调节">
+    <label>
+      <span>镭射强度 <output id="foil-value">65%</output></span>
+      <input id="foil" type="range" min="0" max="1.2" step="0.01" value="0.65">
+    </label>
+    <label>
+      <span>人物缩放 <output id="scale-value">1.25</output></span>
+      <input id="scale" type="range" min="1" max="1.7" step="0.01" value="1.25">
+    </label>
+    <label>
+      <span>人物视差 <output id="depth-value">0.40</output></span>
+      <input id="depth" type="range" min="0" max="0.8" step="0.01" value="0.4">
+    </label>
+    <label>
+      <span>背景景深 <output id="bg-depth-value">−0.25</output></span>
+      <input id="bg-depth" type="range" min="-0.65" max="0" step="0.01" value="-0.25">
+    </label>
+  </section>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
